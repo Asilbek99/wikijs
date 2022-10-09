@@ -40,15 +40,15 @@ spec:
           imagePullPolicy: {{ default "IfNotPresent" .Values.image.imagePullPolicy }}
           env:
             - name: DB_TYPE
-              value: {{ default "mysql" .Values.db.Type }}
+              value: {{ default "mysql" .Values.db.type }}
             - name: DB_HOST
-              value: {{ default "mysql" .Values.db.Host }}
+              value: {{ default "mysql" .Values.db.host }}
             - name: DB_PORT
-              value: {{ default "3306" .Values.db.Port }}
+              value: {{ default "3306" .Values.db.port }}
             - name: DB_NAME
-              value: {{ default "wiki" .Values.db.Database }}
+              value: {{ default "wiki" .Values.db.database }}
             - name: DB_USER
-              value: {{ default "wiki" .Values.db.User }}
+              value: {{ default "wiki" .Values.db.user }}
             - name: DB_SSL
               value: {{ default "false" .Values.db.ssl }}
             - name: DB_SSL_CA

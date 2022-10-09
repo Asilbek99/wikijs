@@ -114,9 +114,9 @@ sideload:
   #    value: http://my.proxy.com:3128
 
 db:
-  Type: mysql
-  Host: mysql
-  Port: 3306
-  Database: wiki
-  User: wiki
+  type: mysql
+  host: mysql
+  port: 3306
+  database: wiki
+  user: wiki
   existingSecret: wiki-pass

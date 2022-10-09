@@ -3,9 +3,9 @@ entries:
   wiki:
   - apiVersion: v2
     appVersion: latest
-    created: "2022-10-09T12:35:48.40786+05:00"
+    created: "2022-10-09T12:48:23.692158+05:00"
     description: The most powerful and extensible open source Wiki software.
-    digest: 2e1db20edc4bd0f5cee01d9e63bf0181db8eb2e2c607e98c2887ed700d8ff247
+    digest: 6ffc3c5584aeac88334b66db6b2933f2d4143ccc26ea4afe69dbcae928132c2c
     home: https://wiki.js.org
     icon: https://cdn.js.wiki/images/wikijs-butterfly.svg
     keywords:
@@ -20,6 +20,6 @@ entries:
     - https://github.com/Requarks/wiki
     type: application
     urls:
-    - https://asilbek99.github.io/wikijs/wiki-2.2.18.tgz
-    version: 2.2.18
-generated: "2022-10-09T12:35:48.405853+05:00"
+    - https://asilbek99.github.io/wikijs/wiki-1.0.1.tgz
+    version: 1.0.1
+generated: "2022-10-09T12:48:23.690334+05:00"
