@@ -40,26 +40,24 @@ spec:
           imagePullPolicy: {{ default "IfNotPresent" .Values.image.imagePullPolicy }}
           env:
             - name: DB_TYPE
-              value: "{{ default "mysql" .Values.db.Type }}"
+              value: {{ default "mysql" .Values.db.Type }}
             - name: DB_HOST
-              value: "{{ default "mysql" .Values.db.Host }}"
+              value: {{ default "mysql" .Values.db.Host }}
             - name: DB_PORT
-              value: "{{ default "3306" .Values.db.Port }}"
+              value: {{ default "3306" .Values.db.Port }}
             - name: DB_NAME
               value: {{ default "wiki" .Values.db.Database }}
             - name: DB_USER
               value: {{ default "wiki" .Values.db.User }}
             - name: DB_SSL
-              value: "{{ default "false" .Values.db.ssl }}"
+              value: {{ default "false" .Values.db.ssl }}
             - name: DB_SSL_CA
-              value: "{{ default "" .Values.db.ca }}"
+              value: {{ default "" .Values.db.ca }}
             - name: DB_PASS
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.db.existingSecret }}
-                  key: {{- default "db-password" .Values.db.existingSecretKey | quote -}}
-            - name: HA_ACTIVE
-              value: {{ .Values.replicaCount | int | le 2 | quote }}
+                  key: {{ default "db-password" .Values.db.existingSecretKey }}
     {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
